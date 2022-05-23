@@ -1,0 +1,56 @@
+'lib' folder is important for global config.
+
+next.config.js  --->
+  Must Add 'domains' for 'IMAGE' plugin here.
+  Code:
+    module.exports = {
+      images: {
+        domains: [process.env.NEXT_IMAGE_DOMAIN],
+      },
+    }
+
+https://next-drupal.org/  --->
+  [root]/lib/nextDrupalOrg.jsx  [ Very important to add this file and also include this to the pages that uses this plugin ]
+
+  'getResource' only returns details of that object, it will not return the related details so if 'node--article' HAS IMAGES we need
+  we need two request one for the 'node--article' and another for 'file--file'
+  Code: [root]/pages/next-drupal/[articleId].jsx
+
+  In here "fields[node--article]" selects the Fields, "include" to include relationship data, for by the code you will have 'article'
+  with selected fields and also the RELATED IMAGE and UID.
+  CODE BLOCK:
+    const article = await drupal.getResource(
+        "node--article",
+        params.articleId.toString(),{
+            params: {
+                "fields[node--article]": "title,body,path,field_image,uid",
+                "include": "field_image, uid"
+            },
+        }
+    );
+
+https://project.pages.drupalcode.org/drupal_state/ or https://www.npmjs.com/package/@pantheon-systems/drupal-kit  --->
+  Image is not a part of 'ARTICLE' but is related to 'ARTICLE', so to get the image details through 'getObject' we must add the 'field_image'
+  to the include.
+  CODE BLOCK:
+    //  Add an include parameter to include relationship data
+    store.params.addInclude(["field_image"]);
+    const articleFromApi = await store.getObject({
+        objectName: 'node--article',
+        id: params.articleId,
+        query: `{
+                id
+                title
+                body
+                path {
+                    alias
+                }
+                field_image
+            }`
+    });
+
+https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/api-overview
+  To access IMAGES we need to hit URL in this way
+  Request URL:
+    const res = await fetch(`${DRUPAL_URL}/jsonapi/node/article/${params.articleId}?include=field_image&fields[file--file]=uri,url`);
+  The Data Field for image: data.included[array].attributes.uri.url
