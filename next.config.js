@@ -19,4 +19,3 @@ module.exports = {
     imageUrl: `https://${process.env.NEXT_IMAGE_DOMAIN}`,
   },
 }
-

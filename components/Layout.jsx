@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from "next/head";
 
+//import { Head } from 'next/document'
+
 import Header from './Header';
 import Footer from './Footer';
 
@@ -9,7 +11,7 @@ export default function Layout( { children } ) {
     return (
         <div className='fullPage'>
             <Head>
-                <meta charset="utf-8" />
+                <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="description" content="" />
                 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
@@ -19,7 +21,6 @@ export default function Layout( { children } ) {
                 <meta name="theme-color" content="#712cf9" />
                 
                 <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet" />
-                <link href="blog.css" rel="stylesheet" />
             </Head>
 
             <Header />
