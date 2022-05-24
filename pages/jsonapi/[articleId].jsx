@@ -5,19 +5,20 @@ import { DRUPAL_URL, IMAGE_URL } from "../../lib/constants.jsx"
 
 export default function nextDrupalArticle( { data } ) {
 
-    /*
+    var imgSrc = "";
     if( data ) {
         console.log("<<<<<--------  [data]");  
         console.log(data);
         console.log("[data]    -------->>>>>");  
-    }
-    */
-    
-    const imgSrc = data?.included[0]?.attributes?.uri?.url || "";
 
+        if( data.included && data.included[0] ) {
+            imgSrc = data.included[0].attributes.uri.url;
+        }
+    }
+    
     return (
         <div>
-            { imgSrc && <div className="relative w-full rounded-lg shadow-lg overflow-hidden mb-10" > 
+            { imgSrc != "" && <div className="relative w-full rounded-lg shadow-lg overflow-hidden mb-10" > 
             
                 <Image priority
                     src={DRUPAL_URL + imgSrc}
