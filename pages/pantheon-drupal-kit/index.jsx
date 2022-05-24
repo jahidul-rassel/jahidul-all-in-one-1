@@ -7,7 +7,7 @@ import Head from 'next/head';
 import { DrupalState } from "@pantheon-systems/drupal-kit";
 
 export default function panthoenDrupalKit( { article } ) {
-    console.log(article);
+    //console.log(article);
     return (
         <div className='divPostList'>
             
@@ -44,7 +44,7 @@ const store = new DrupalState({
 export async function getServerSideProps(context) {
     const recipesFromApi = await store.getObject({ objectName: 'node--article' });
   
-    console.log("pantheon-drupal-kit [ getServerSideProps ]");
+    //console.log("pantheon-drupal-kit [ getServerSideProps ]");
 
     return {
         props: {

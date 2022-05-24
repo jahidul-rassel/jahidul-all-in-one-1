@@ -73,7 +73,7 @@ export async function getStaticPaths() {
 
 // This gets called at build time [ PART OF SSG ] 
 export async function getStaticProps( {params} ) {
-    console.log(params);
+    //console.log(params);
 
     try {
         /*
@@ -93,10 +93,11 @@ export async function getStaticProps( {params} ) {
             }
         );
 
+        /*
         console.log("<<<<<--------  [getStaticProps - article]");  
         console.log(article);
         console.log("[getStaticProps - article]    -------->>>>>"); 
-        
+        */
 
         if( article.field_image && article.field_image.id ) {
             console.log("Image ID: "+ article.field_image.id);

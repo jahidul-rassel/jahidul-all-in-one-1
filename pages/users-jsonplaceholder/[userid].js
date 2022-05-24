@@ -6,9 +6,12 @@ import Post from '../../styles/Post.module.css';
 import Head from 'next/head';
 
 export default function user( props ) {
+  /*
   console.log("<<<<<-----");
   console.log(props.data);
   console.log("----->>>>>");
+  */
+ 
   return (
     <div>
       {

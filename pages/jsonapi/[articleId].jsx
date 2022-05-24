@@ -7,10 +7,12 @@ export default function nextDrupalArticle( { data } ) {
 
     var imgSrc = "";
     if( data ) {
+        /*
         console.log("<<<<<--------  [data]");  
         console.log(data);
         console.log("[data]    -------->>>>>");  
-
+        */
+       
         if( data.included && data.included[0] ) {
             imgSrc = data.included[0].attributes.uri.url;
         }

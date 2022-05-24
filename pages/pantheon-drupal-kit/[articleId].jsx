@@ -8,10 +8,11 @@ import { DRUPAL_URL, IMAGE_URL } from "../../lib/constants.jsx"
 export default function nextDrupalArticle( { articleFromApi } ) {
 
     if( articleFromApi ) {
+        /*
         console.log("<<<<<--------  [articleFromApi]");  
         console.log(articleFromApi);
         console.log("[articleFromApi]    -------->>>>>");  
-
+        */
     }
     
     const imgSrc = articleFromApi?.field_image?.uri?.url || "";
@@ -52,8 +53,7 @@ const store = new DrupalState({
 
 // This function gets called at build time [ PART OF SSG ]
 export async function getStaticPaths() {
-    console.log("pantheon-drupal-kit [getStaticPaths]");
-
+    //console.log("pantheon-drupal-kit [getStaticPaths]");
     //console.log("DRUPAL_URL: " + DRUPAL_URL);
 
     const articleFromApi = await store.getObject({ 
@@ -111,10 +111,11 @@ export async function getStaticProps( {params} ) {
                 }`
         }); 
 
-            
+        /*    
         console.log("<<<<<--------  [getObject -----> getStaticPaths -> articleFromApi]");  
         console.log(articleFromApi);
         console.log("[getObject -----> getStaticPaths -> articleFromApi]    -------->>>>>"); 
+        */
 
         // Pass post data to the page via props
         return { props: { articleFromApi } }

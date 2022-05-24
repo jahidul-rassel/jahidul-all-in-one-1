@@ -1,10 +1,9 @@
 import React from 'react'
-import Navbar from './navbar'
+import Navbar from '../components/Navbar'
+
 
 export default function Header() {
   return (
-    <div>
-      <Navbar></Navbar>
-    </div>
+    <Navbar></Navbar>
   )
 }

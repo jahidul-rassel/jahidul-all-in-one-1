@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head';
 
 export default function index( {data: arrData} ) {
-  console.log(arrData);
+  //console.log(arrData);
 
   return (
     <div className='divPostList'>

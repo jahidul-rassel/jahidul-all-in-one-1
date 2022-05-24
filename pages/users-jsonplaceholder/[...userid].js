@@ -5,10 +5,9 @@ import Post from '../../styles/Post.module.css';
 import Head from 'next/head';
 
 export default function Details( props ) {
+  //console.log( props ); 
 
-  console.log( props ); 
-
-  console.log( Object.entries(props.data).length ); 
+  //console.log( Object.entries(props.data).length ); 
 
   if( Object.entries(props.data).length === 0 ) {
     return (<div>ERROR IN REQUEST DATA [getServerSideProps]</div> );
@@ -41,8 +40,7 @@ export default function Details( props ) {
 
 
 export async function getServerSideProps( context ) {
-
-  console.log(context.query);
+  //console.log(context.query);
 
   try {
     var userId = context.query.userid[0];

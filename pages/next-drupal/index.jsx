@@ -12,7 +12,7 @@ import Head from 'next/head';
 
 export default function nextDrupalModule( { article } ) {
 
-    console.log(article);
+    //console.log(article);
 
     return (
         <div className='divPostList'>
@@ -60,7 +60,7 @@ export async function getServerSideProps(context) {
         },
     });
 
-    console.log("next-drupal [getServerSideProps]");
+    //console.log("next-drupal [getServerSideProps]");
     //console.log(articles);
 
     return {
