@@ -6,7 +6,7 @@ const ArticleList = ( { articleList, spanText } ) => {
     
     return (
         <div>
-            <h5>The List From 'ArticleList' Component</h5> 
+            <h5>The List From &apos;ArticleList&apos; Component</h5> 
             <span style={{color: "red"}}>{ spanText } </span>
 
             <ul>

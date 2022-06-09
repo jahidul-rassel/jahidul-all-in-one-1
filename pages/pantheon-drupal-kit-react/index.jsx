@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -9,6 +9,7 @@ import { DrupalState } from "@pantheon-systems/drupal-kit";
 import ArticleList from './articleList';
 
 export default function panthoenDrupalKit( { article } ) {
+    
     const [ articleList, setArticleList ] = React.useState(article);
 
     const [ searchArticleList, setSearchArticleList ] = React.useState(articleList);
