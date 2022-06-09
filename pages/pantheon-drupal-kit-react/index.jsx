@@ -6,7 +6,7 @@ import Head from 'next/head';
 //  Pantheon Drupal Kit
 import { DrupalState } from "@pantheon-systems/drupal-kit";
 
-import ArticleList from './articleList';
+import ArticleList from './ArticleList';
 
 export default function PanthoenDrupalKit( { article } ) {
     
