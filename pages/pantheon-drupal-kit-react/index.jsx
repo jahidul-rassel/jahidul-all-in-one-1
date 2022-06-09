@@ -8,7 +8,7 @@ import { DrupalState } from "@pantheon-systems/drupal-kit";
 
 import ArticleList from './articleList';
 
-export default function panthoenDrupalKit( { article } ) {
+export default function PanthoenDrupalKit( { article } ) {
     
     const [ articleList, setArticleList ] = useState(article);
 
