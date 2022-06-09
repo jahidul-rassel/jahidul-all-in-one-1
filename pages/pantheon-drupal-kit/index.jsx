@@ -19,6 +19,7 @@ export default function panthoenDrupalKit( { article } ) {
 
             <div className='postsListDiv'>
                 <p>https://www.npmjs.com/package/@pantheon-systems/drupal-kit</p> 
+                <p>https://project.pages.drupalcode.org/drupal_state/en/api/classes/DrupalState.default.html</p>
                 <p>https://project.pages.drupalcode.org/drupal_state/en/introduction/</p> 
                 <p>https://project.pages.drupalcode.org/drupal_state/en/quick-start/</p>
                 <ul>

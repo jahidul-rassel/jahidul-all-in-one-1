@@ -41,7 +41,14 @@ export default function Navbar() {
               </Link>  
             </li>
             <li className="nav-item">
-              <Link href="/" passHref><a className="nav-link disabled">Disabled</a></Link> 
+              <Link href="/pantheon-drupal-kit-react" passHref>
+                <a className="nav-link" >useState</a>
+              </Link>  
+            </li>
+            <li className="nav-item">
+              <Link href="/panthoen-new-site" passHref>
+                <a className="nav-link" >NewTest</a>
+              </Link> 
             </li>
           </ul>
           <form role="search">

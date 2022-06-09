@@ -4,7 +4,6 @@ import Image from "next/image"
 import { DRUPAL_URL, IMAGE_URL } from "../../lib/constants.jsx"
 
 export default function nextDrupalArticle( { data } ) {
-
     var imgSrc = "";
     if( data ) {
         /*
@@ -54,20 +53,15 @@ export async function getStaticPaths() {
     const paths = dataArr.data.map((data) => ({
         params: { articleId: data.id }
     }));
-
-    //console.log(paths);
-
+    
     return { paths, fallback: true }
 }
-
 
 // This gets called at build time [ PART OF SSG ] 
 export async function getStaticProps( {params} ) {
     try {
         const res = await fetch(`${DRUPAL_URL}/jsonapi/node/article/${params.articleId}?include=field_image&fields[file--file]=uri,url`);
         const data = await res.json();
-
-        //console.log(data);
         
         // Pass post data to the page via props
         return { props: { data } }

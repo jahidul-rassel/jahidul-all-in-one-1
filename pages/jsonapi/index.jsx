@@ -7,7 +7,7 @@ export default function index( {data: arrData} ) {
 
   return (
     <div className='divPostList'>
-      
+        
         <Head>
             <title>Article List [JSON:API]</title>
         </Head>
