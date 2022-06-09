@@ -50,7 +50,9 @@ https://project.pages.drupalcode.org/drupal_state/ or https://www.npmjs.com/pack
     });
 
 https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/api-overview
-  To access IMAGES we need to hit URL in this way
+  https://drupalize.me/tutorial/jsonapi-includes?p=3003
+  To access Related Fields we need to hit URL in this following Format
   Request URL:
-    const res = await fetch(`${DRUPAL_URL}/jsonapi/node/article/${params.articleId}?include=field_image&fields[file--file]=uri,url`);
+    relatedObjects = 'field_image, field_tags'
+    const res = await fetch(`${DRUPAL_URL}/jsonapi/node/article/${params.articleId}?include=[relatedObjects]&fields[file--file]=uri,url`);
   The Data Field for image: data.included[array].attributes.uri.url
