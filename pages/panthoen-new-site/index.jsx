@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Link from 'next/link';
 
@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { DrupalState } from "@pantheon-systems/drupal-kit";
 
 export default function panthoenNewSite({ article }) {
-    const [ articleList, setArticleList ] = React.useState(article);
+    const [ articleList, setArticleList ] = useState(article);
     return (
         <div>
             <h5>Panthoen - New - Site</h5>

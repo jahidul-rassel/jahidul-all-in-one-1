@@ -6,7 +6,7 @@ import { DrupalState } from '@pantheon-systems/drupal-kit'
 import { DRUPAL_URL, IMAGE_URL } from "../../lib/constants.jsx"
 
 export default function nextDrupalArticle( { articleFromApi } ) {
-    const [ articleDetails, setArticleList ] = React.useState(articleFromApi);
+    const [ articleDetails, setArticleList ] = useState(articleFromApi);
 
     if( articleDetails ) {
         console.log("<<<<<--------  [articleDetails {useState}]");  

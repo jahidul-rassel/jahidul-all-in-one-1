@@ -10,10 +10,10 @@ import ArticleList from './articleList';
 
 export default function panthoenDrupalKit( { article } ) {
     
-    const [ articleList, setArticleList ] = React.useState(article);
+    const [ articleList, setArticleList ] = useState(article);
 
-    const [ searchArticleList, setSearchArticleList ] = React.useState(articleList);
-    const [ searchByTitle, setSearchByTitle ] = React.useState("");
+    const [ searchArticleList, setSearchArticleList ] = useState(articleList);
+    const [ searchByTitle, setSearchByTitle ] = useState("");
 
     const filterOnChange = ( searchValue ) => {
         const searchResult = articleList.filter( (article) => {
