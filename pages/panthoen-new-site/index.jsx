@@ -5,7 +5,7 @@ import Link from 'next/link';
 //  Pantheon Drupal Kit
 import { DrupalState } from "@pantheon-systems/drupal-kit";
 
-export default function panthoenNewSite({ article }) {
+export default function PanthoenNewSite({ article }) {
     const [ articleList, setArticleList ] = useState(article);
     return (
         <div>
