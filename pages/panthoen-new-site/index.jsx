@@ -9,7 +9,7 @@ export default function PanthoenNewSite({ article }) {
     const [ articleList, setArticleList ] = useState(article);
     return (
         <div>
-            <h5>Panthoen - New - Site</h5>
+            <h5>Panthoen - New - Site - Access</h5>
 
             <ul>
             {
