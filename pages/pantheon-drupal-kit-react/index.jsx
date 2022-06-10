@@ -6,14 +6,14 @@ import Head from 'next/head';
 //  Pantheon Drupal Kit
 import { DrupalState } from "@pantheon-systems/drupal-kit";
 
-import ArticleList from './articleList';
+import ArticleList from './ArticleList';
 
-export default function panthoenDrupalKit( { article } ) {
+export default function PanthoenDrupalKit( { article } ) {
     
-    const [ articleList, setArticleList ] = React.useState(article);
+    const [ articleList, setArticleList ] = useState(article);
 
-    const [ searchArticleList, setSearchArticleList ] = React.useState(articleList);
-    const [ searchByTitle, setSearchByTitle ] = React.useState("");
+    const [ searchArticleList, setSearchArticleList ] = useState(articleList);
+    const [ searchByTitle, setSearchByTitle ] = useState("");
 
     const filterOnChange = ( searchValue ) => {
         const searchResult = articleList.filter( (article) => {
