@@ -35,7 +35,7 @@ export default function index( {data: arrData} ) {
 
 
 export async function getServerSideProps( { params } ) {
-  console.log("getServerSideProps");
+  //console.log("getServerSideProps");
   const req = await fetch(`https://dev-training-decouple-drupal.pantheonsite.io/jsonapi/node/article`);
   const data = await req.json();
 

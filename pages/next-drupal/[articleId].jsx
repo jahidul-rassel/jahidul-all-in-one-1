@@ -24,7 +24,7 @@ export default function nextDrupalArticle( { article } ) {
                     objectFit="fill"
                     alt={article && article.field_image.resourceIdObjMeta.alt}
                 />
-                { console.log("Image URL, "+ DRUPAL_URL + imgSrc) }
+                { /* console.log("Image URL, "+ DRUPAL_URL + imgSrc) */ }
             </div> }
 
             <div className="mt-4" > 

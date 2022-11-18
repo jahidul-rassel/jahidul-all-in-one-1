@@ -13,7 +13,6 @@ export default function Details( props ) {
     return (<div>ERROR IN REQUEST DATA [getServerSideProps]</div> );
   }
   else {
-    
     return (
       <div>
         <Head>

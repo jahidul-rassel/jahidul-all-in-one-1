@@ -29,7 +29,7 @@ export default function nextDrupalArticle( { articleFromApi } ) {
                     objectFit="fill"
                     alt={articleFromApi && articleFromApi.title}
                 />
-                { console.log("Image URL, "+ DRUPAL_URL + imgSrc) }
+                { /* console.log("Image URL, "+ DRUPAL_URL + imgSrc) */ }
             </div> }
 
             <div className="mt-4" > 

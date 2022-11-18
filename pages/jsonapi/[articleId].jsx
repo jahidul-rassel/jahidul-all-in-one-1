@@ -30,7 +30,7 @@ export default function nextDrupalArticle( { data } ) {
                     alt={data && data.data.title}
                 />
                 
-                { console.log("Image URL, "+ DRUPAL_URL + imgSrc) }
+                { /* console.log("Image URL, "+ DRUPAL_URL + imgSrc) */ }
             </div> } 
 
             <div className="mt-4" > 

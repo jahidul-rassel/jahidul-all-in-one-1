@@ -9,9 +9,11 @@ export default function NextDrupalArticle( { articleFromApi } ) {
     const [ articleDetails, setArticleList ] = React.useState(articleFromApi);
 
     if( articleDetails ) {
+        /*
         console.log("<<<<<--------  [articleDetails {useState}]");  
         console.log(articleDetails);
         console.log("[articleDetails {useState}]    -------->>>>>");
+        */
     }
     
     const imgSrc = articleDetails?.field_image?.uri?.url || "";
@@ -28,7 +30,7 @@ export default function NextDrupalArticle( { articleFromApi } ) {
                     objectFit="fill"
                     alt={articleDetails && articleDetails.title}
                 />
-                { console.log("Image URL, "+ DRUPAL_URL + imgSrc) }
+                { /* console.log("Image URL, "+ DRUPAL_URL + imgSrc) */ }
             </div> }
 
             <div className="mt-4" > 
