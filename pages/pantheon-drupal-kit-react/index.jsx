@@ -6,9 +6,9 @@ import Head from 'next/head';
 //  Pantheon Drupal Kit
 import { DrupalState } from "@pantheon-systems/drupal-kit";
 
-import ArticleList from './articleList';
+import ArticleList from '../../components/ArticleList';
 
-export default function panthoenDrupalKit( { article } ) {
+export default function PanthoenDrupalKit( { article } ) {
     
     const [ articleList, setArticleList ] = React.useState(article);
 
