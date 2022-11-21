@@ -57,7 +57,6 @@ export async function getStaticPaths() {
     return { paths, fallback: false }
 }
 
-
 // This gets called at build time [ PART OF SSG ] 
 export async function getStaticProps( {params} ) {
     try {
