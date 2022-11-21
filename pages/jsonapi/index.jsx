@@ -45,9 +45,11 @@ export async function getServerSideProps( { params } ) {
       }
   }
 
+  /*
   console.log("The SSR Data [START]");
   console.log(data);
   console.log("The SSR Data [END]");
+  */
 
   return {
       props: { data },

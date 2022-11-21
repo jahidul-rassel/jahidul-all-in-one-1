@@ -54,7 +54,7 @@ export async function getStaticPaths() {
         params: { articleId: data.id }
     }));
     
-    return { paths, fallback: true }
+    return { paths, fallback: false }
 }
 
 
